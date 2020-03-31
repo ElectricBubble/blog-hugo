@@ -4,36 +4,42 @@
   
   <url>
     <loc>http://leixipaopao.com/tags/golang/</loc>
-    <lastmod>2020-03-26T18:10:56+08:00</lastmod>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://leixipaopao.com/posts/how-to-know-the-32-or-64-bit/</loc>
-    <lastmod>2020-03-26T18:10:56+08:00</lastmod>
+    <loc>http://leixipaopao.com/tags/nmon/</loc>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/posts/</loc>
-    <lastmod>2020-03-26T18:10:56+08:00</lastmod>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/</loc>
-    <lastmod>2020-03-26T18:10:56+08:00</lastmod>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/posts/golang-nmon-analyser/</loc>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/</loc>
+    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</loc>
     <lastmod>2020-03-26T18:10:56+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/about-me/</loc>
     <lastmod>2019-10-28T15:01:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://leixipaopao.com/post/</loc>
   </url>
   
 </urlset>

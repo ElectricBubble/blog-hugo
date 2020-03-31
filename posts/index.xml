@@ -6,15 +6,52 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 26 Mar 2020 18:10:56 +0800</lastBuildDate>
+		<lastBuildDate>Tue, 31 Mar 2020 15:40:39 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>使用 Golang 编写的 Web版 Nmon Analyser</title>
+			<link>http://leixipaopao.com/posts/golang-nmon-analyser/</link>
+			<pubDate>Tue, 31 Mar 2020 15:40:39 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/golang-nmon-analyser/</guid>
+			<description>模仿 Nmon-Analyser（Excel版本）的 Web 版本。 原本做好了就放 线上 没咋去管了，今天才发现原来线上的版本还引用了一个访问很慢的 css 文件</description>
+			<content type="html"><![CDATA[<p>模仿 Nmon-Analyser（Excel版本）的 Web 版本。</p>
+
+<p>原本做好了就放 <a href="http://nmon.leixipaopao.com">线上</a> 没咋去管了，今天才发现原来线上的版本还引用了一个访问很慢的 css 文件，还一直以为是我服务器的带宽太低了。。。</p>
+
+<p>之前也想着做一个离线版本，拖到现在。。</p>
+
+<p>线上的版本是前后端分离的，为了偷个懒，我就继续用 <a href="https://github.com/mjibson/esc">esc</a> 把前端都给打包进来了。</p>
+
+<p>所以呢，访问页面的端口也是被固定了</p>
+
+<p><a href="https://github.com/ElectricBubble/nmon-analyser-releases/releases/latest">下载地址</a></p>
+
+<p>执行后，浏览器 (Chrome/Safari) <a href="http://localhost:10001/nmon/">访问</a> <code>http://localhost:10001/nmon/</code></p>
+
+<p>通过左上角的上传 nmon 文件 <img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200330171254.png" style="zoom:50%;" /></p>
+
+<p>解析完毕后，旁边的 tab栏 会显示全部分类，切换可看到对应的图表</p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200330171552.png" alt="" /></p>
+
+<p>对应图表📈的底下，还有一个简陋的对应指标的平均值</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<p><font size=1>因为感觉代码写的一般。。。就不放源码了。。</font></p>
+]]></content>
+		</item>
+		
+		<item>
 			<title>Golang 判断系统是 32/64-bit</title>
-			<link>http://leixipaopao.com/posts/how-to-know-the-32-or-64-bit/</link>
+			<link>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</link>
 			<pubDate>Thu, 26 Mar 2020 18:10:56 +0800</pubDate>
 			
-			<guid>http://leixipaopao.com/posts/how-to-know-the-32-or-64-bit/</guid>
+			<guid>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</guid>
 			<description>bit := 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 在 64位 的系统中 bit 的值为 64 在 32位 的系统中 bit 的值为 32 64-bit 32-bit 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 64 32 ^uint(0) 二进制的值 64个1 32个1 ^uint(0) &amp;gt;&amp;gt; 63 二进制的值 1 0 32 &amp;lt;&amp;lt; 1 32</description>
 			<content type="html"><![CDATA[<p><code>bit := 32 &lt;&lt; (^uint(0) &gt;&gt; 63)</code></p>
 
