@@ -6,15 +6,158 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 31 Mar 2020 15:40:39 +0800</lastBuildDate>
+		<lastBuildDate>Thu, 02 Apr 2020 13:59:26 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>Vue 使用 UI 组件库 Vuetify 创建项目</title>
+			<link>http://leixipaopao.com/posts/0003-vue-vuetify-create/</link>
+			<pubDate>Thu, 02 Apr 2020 13:59:26 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/0003-vue-vuetify-create/</guid>
+			<description>前端一直尝试在学习，也断断续续的使用着 Vue.js 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以</description>
+			<content type="html"><![CDATA[
+
+<p>前端一直尝试在学习，也断断续续的使用着 <code>Vue.js</code> 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以决定还是自己记录一下。</p>
+
+<h2 id="创建项目">创建项目</h2>
+
+<ul>
+<li><p>使用 <code>Vue UI</code> 创建项目</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vue ui</code></pre></div>
+<p>访问 <a href="http://localhost:8000">http://localhost:8000</a> 操作即可。（ 这页面很酷啊！）</p></li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+<li><p>使用 <code>Vue CLI</code> 创建项目</p>
+
+<p>会在当前路径下新建一个项目名称的文件夹。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vue create 项目名称</code></pre></div>
+<p>这里使用按键 <code>j/k</code> 或 <code>方向键</code> 上下选择，<code>回车键</code> 确定选择，我这里选择 <code>Manually select features</code> 进行手动选择。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+? Please pick a preset: 
+first-preset <span class="o">(</span>router, babel, eslint<span class="o">)</span> 
+default <span class="o">(</span>babel, eslint<span class="o">)</span> 
+❯ Manually <span class="k">select</span> features </code></pre></div>
+<p>使用 <code>空格键</code> 勾选 ✔︎ <code>回车键</code>进入下一步。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+? Please pick a preset: Manually <span class="k">select</span> features
+? Check the features needed <span class="k">for</span> your project: 
+◉ Babel
+◯ TypeScript
+◯ Progressive Web App <span class="o">(</span>PWA<span class="o">)</span> Support
+◉ Router
+◉ Vuex
+❯◉ CSS Pre-processors
+◉ Linter / Formatter
+◯ Unit Testing
+◯ E2E Testing</code></pre></div>
+<p>因为我选择了 <code>Router</code> ，所以还有一个选择，<code>y</code> 的话，就是使用 <code>History</code> 模式，否则就是 <code>Hash</code> 模式。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Use <span class="nb">history</span> mode <span class="k">for</span> router? <span class="o">(</span>Requires proper server setup <span class="k">for</span> index fallback 
+in production<span class="o">)</span> <span class="o">(</span>Y/n<span class="o">)</span> y</code></pre></div>
+<p>我还选择了 <code>CSS Pre-processors</code> ，所以继续选择，这里我选择了 <code>Less</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick a CSS pre-processor <span class="o">(</span>PostCSS, Autoprefixer and CSS Modules are supported 
+by default<span class="o">)</span>: 
+Sass/SCSS <span class="o">(</span>with dart-sass<span class="o">)</span> 
+Sass/SCSS <span class="o">(</span>with node-sass<span class="o">)</span> 
+❯ Less 
+Stylus </code></pre></div>
+<p>图个省事儿，直接选择 <code>ESLint + Prettier</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick a linter / formatter config: 
+ESLint with error prevention only 
+ESLint + Airbnb config 
+ESLint + Standard config 
+❯ ESLint + Prettier </code></pre></div>
+<p>这里可以多选，我个人选择 <code>Lint on save</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick additional lint features: <span class="o">(</span>Press &lt;space&gt; to <span class="k">select</span>, &lt;a&gt; to toggle all, &lt;i
+&gt; to invert selection<span class="o">)</span>
+❯◉ Lint on save
+◯ Lint and fix on commit</code></pre></div>
+<p>这里选择配置文件单独存放还是全都放在一个文件里里，我选择 <code>In dedicated config files</code> 独立存放，看着舒服。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Where <span class="k">do</span> you prefer placing config <span class="k">for</span> Babel, ESLint, etc.? <span class="o">(</span>Use arrow keys<span class="o">)</span>
+❯ In dedicated config files 
+In package.json </code></pre></div>
+<p>是否把当前的项目创建配置作为一个预设配置，方便下次快速创建。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Save this as a preset <span class="k">for</span> future projects? <span class="o">(</span>y/N<span class="o">)</span> </code></pre></div></li>
+</ul>
+
+<h2 id="运行项目">运行项目</h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"> $ <span class="nb">cd</span> 项目名称
+ $ npm run serve</code></pre></div>
+<p>访问 <a href="http://localhost:8080">http://localhost:8080</a></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402111547.png" alt="" /></p>
+
+<h2 id="vuetify-安装">Vuetify 安装</h2>
+
+<p>接下来开始使用 <code>Vuetify</code> UI 组件库。</p>
+
+<p>这里我选择用 <code>Vue UI</code> 进行安装。（ 就是想用这个很酷的管理页面 ）</p>
+
+<p>也可以使用其他的安装方式 <a href="https://vuetifyjs.com/zh-Hans/getting-started/quick-start/">Vuetify 入门指南</a> 。</p>
+
+<p>先将当前创建的项目导入到 <code>Vue 项目管理器</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402113605.png" alt="" /></p>
+
+<p>导入完成后从左侧菜单栏进入 <code>插件</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402114030.png" alt="" /></p>
+
+<p>右侧 <code>添加插件</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402114131.png" alt="" /></p>
+
+<p>输入 <code>Vuetify</code> 选中第一个，右下角 <code>安装</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402120334.png" alt="" /></p>
+
+<p>完成安装后，我们再访问 <a href="http://localhost:8080">http://localhost:8080</a> 可以看到新的界面。</p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402121012.png" alt="" /></p>
+
+<h2 id="本地依赖字体和图标">本地依赖字体和图标</h2>
+
+<p><code>Vuetify</code> 安装完成后， 项目路径下 <code>public/index.html</code> 会被增加 2个 <code>stylesheet</code>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css&#34;</span><span class="p">&gt;</span></code></pre></div>
+<p>默认是使用的 <code>CDN</code> 访问，我需要作为本地依赖：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ npm install @mdi/font -D
+$ npm install material-design-icons-iconfont -D</code></pre></div>
+<p>安装完成后，修改项目路径下 <code>src/plugins/vuetify.js</code> 分别 <code>import</code> 这两个 <code>css</code>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Vuetify</span> <span class="nx">from</span> <span class="s2">&#34;vuetify/lib&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;@mdi/font/css/materialdesignicons.css&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;material-design-icons-iconfont/dist/material-design-icons.css&#34;</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuetify</span><span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuetify</span><span class="p">({});</span>
+</code></pre></div>
+<p>然后删除 <code>public/index.html</code> 里的 2个 <code>stylesheet</code> ，再访问就不会像之前那么慢了。</p>
+]]></content>
+		</item>
+		
+		<item>
 			<title>使用 Golang 编写的 Web版 Nmon Analyser</title>
-			<link>http://leixipaopao.com/posts/golang-nmon-analyser/</link>
+			<link>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</link>
 			<pubDate>Tue, 31 Mar 2020 15:40:39 +0800</pubDate>
 			
-			<guid>http://leixipaopao.com/posts/golang-nmon-analyser/</guid>
+			<guid>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</guid>
 			<description>模仿 Nmon-Analyser（Excel版本）的 Web 版本。 原本做好了就放 线上 没咋去管了，今天才发现原来线上的版本还引用了一个访问很慢的 css 文件</description>
 			<content type="html"><![CDATA[<p>模仿 Nmon-Analyser（Excel版本）的 Web 版本。</p>
 
@@ -48,10 +191,10 @@
 		
 		<item>
 			<title>Golang 判断系统是 32/64-bit</title>
-			<link>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</link>
+			<link>http://leixipaopao.com/posts/0001-golang-how-to-know-the-32-or-64-bit/</link>
 			<pubDate>Thu, 26 Mar 2020 18:10:56 +0800</pubDate>
 			
-			<guid>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</guid>
+			<guid>http://leixipaopao.com/posts/0001-golang-how-to-know-the-32-or-64-bit/</guid>
 			<description>bit := 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 在 64位 的系统中 bit 的值为 64 在 32位 的系统中 bit 的值为 32 64-bit 32-bit 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 64 32 ^uint(0) 二进制的值 64个1 32个1 ^uint(0) &amp;gt;&amp;gt; 63 二进制的值 1 0 32 &amp;lt;&amp;lt; 1 32</description>
 			<content type="html"><![CDATA[<p><code>bit := 32 &lt;&lt; (^uint(0) &gt;&gt; 63)</code></p>
 

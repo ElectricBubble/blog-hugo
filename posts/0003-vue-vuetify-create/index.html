@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Vue 使用 UI 组件库 Vuetify 创建项目">
+<meta itemprop="description" content="前端一直尝试在学习，也断断续续的使用着 Vue.js 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以">
+
+
+<meta itemprop="datePublished" content="2020-04-02T13:59:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-02T13:59:26&#43;08:00" />
+<meta itemprop="wordCount" content="875">
+
+
+
+<meta itemprop="keywords" content="Vue,Vuetify," />
+<meta property="og:title" content="Vue 使用 UI 组件库 Vuetify 创建项目" />
+<meta property="og:description" content="前端一直尝试在学习，也断断续续的使用着 Vue.js 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://leixipaopao.com/posts/0003-vue-vuetify-create/" />
+<meta property="article:published_time" content="2020-04-02T13:59:26+08:00" />
+<meta property="article:modified_time" content="2020-04-02T13:59:26+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue 使用 UI 组件库 Vuetify 创建项目"/>
+<meta name="twitter:description" content="前端一直尝试在学习，也断断续续的使用着 Vue.js 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Vue 使用 UI 组件库 Vuetify 创建项目</title>
+	<link rel="stylesheet" href="http://leixipaopao.com/css/style.min.657bcb7af31123e4156b1a3d2ff60a636717e54ead74f882136b5114cf72b55e.css" integrity="sha256-ZXvLevMRI+QVaxo9L/YKY2cX5U6tdPiCE2tRFM9ytV4=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://leixipaopao.com">雷系泡泡</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://leixipaopao.com/posts/">Posts</a>
+				<a href="http://leixipaopao.com/about-me/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/ElectricBubble/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:bubble_yang@yeah.net" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://leixipaopao.com/posts/">Posts</a></li>
+			<li><a href="http://leixipaopao.com/about-me/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>04-02, 2020</span></div>
+				<h1>Vue 使用 UI 组件库 Vuetify 创建项目</h1>
+			</header>
+			<div class="content">
+				
+
+<p>前端一直尝试在学习，也断断续续的使用着 <code>Vue.js</code> 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以决定还是自己记录一下。</p>
+
+<h2 id="创建项目">创建项目<a href="#创建项目" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ul>
+<li><p>使用 <code>Vue UI</code> 创建项目</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vue ui</code></pre></div>
+<p>访问 <a href="http://localhost:8000">http://localhost:8000</a> 操作即可。（ 这页面很酷啊！）</p></li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+<li><p>使用 <code>Vue CLI</code> 创建项目</p>
+
+<p>会在当前路径下新建一个项目名称的文件夹。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vue create 项目名称</code></pre></div>
+<p>这里使用按键 <code>j/k</code> 或 <code>方向键</code> 上下选择，<code>回车键</code> 确定选择，我这里选择 <code>Manually select features</code> 进行手动选择。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+? Please pick a preset: 
+first-preset <span class="o">(</span>router, babel, eslint<span class="o">)</span> 
+default <span class="o">(</span>babel, eslint<span class="o">)</span> 
+❯ Manually <span class="k">select</span> features </code></pre></div>
+<p>使用 <code>空格键</code> 勾选 ✔︎ <code>回车键</code>进入下一步。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+? Please pick a preset: Manually <span class="k">select</span> features
+? Check the features needed <span class="k">for</span> your project: 
+◉ Babel
+◯ TypeScript
+◯ Progressive Web App <span class="o">(</span>PWA<span class="o">)</span> Support
+◉ Router
+◉ Vuex
+❯◉ CSS Pre-processors
+◉ Linter / Formatter
+◯ Unit Testing
+◯ E2E Testing</code></pre></div>
+<p>因为我选择了 <code>Router</code> ，所以还有一个选择，<code>y</code> 的话，就是使用 <code>History</code> 模式，否则就是 <code>Hash</code> 模式。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Use <span class="nb">history</span> mode <span class="k">for</span> router? <span class="o">(</span>Requires proper server setup <span class="k">for</span> index fallback 
+in production<span class="o">)</span> <span class="o">(</span>Y/n<span class="o">)</span> y</code></pre></div>
+<p>我还选择了 <code>CSS Pre-processors</code> ，所以继续选择，这里我选择了 <code>Less</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick a CSS pre-processor <span class="o">(</span>PostCSS, Autoprefixer and CSS Modules are supported 
+by default<span class="o">)</span>: 
+Sass/SCSS <span class="o">(</span>with dart-sass<span class="o">)</span> 
+Sass/SCSS <span class="o">(</span>with node-sass<span class="o">)</span> 
+❯ Less 
+Stylus </code></pre></div>
+<p>图个省事儿，直接选择 <code>ESLint + Prettier</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick a linter / formatter config: 
+ESLint with error prevention only 
+ESLint + Airbnb config 
+ESLint + Standard config 
+❯ ESLint + Prettier </code></pre></div>
+<p>这里可以多选，我个人选择 <code>Lint on save</code> 。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Pick additional lint features: <span class="o">(</span>Press &lt;space&gt; to <span class="k">select</span>, &lt;a&gt; to toggle all, &lt;i
+&gt; to invert selection<span class="o">)</span>
+❯◉ Lint on save
+◯ Lint and fix on commit</code></pre></div>
+<p>这里选择配置文件单独存放还是全都放在一个文件里里，我选择 <code>In dedicated config files</code> 独立存放，看着舒服。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Where <span class="k">do</span> you prefer placing config <span class="k">for</span> Babel, ESLint, etc.? <span class="o">(</span>Use arrow keys<span class="o">)</span>
+❯ In dedicated config files 
+In package.json </code></pre></div>
+<p>是否把当前的项目创建配置作为一个预设配置，方便下次快速创建。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Vue CLI v4.2.3
+...
+? Save this as a preset <span class="k">for</span> future projects? <span class="o">(</span>y/N<span class="o">)</span> </code></pre></div></li>
+</ul>
+
+<h2 id="运行项目">运行项目<a href="#运行项目" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"> $ <span class="nb">cd</span> 项目名称
+ $ npm run serve</code></pre></div>
+<p>访问 <a href="http://localhost:8080">http://localhost:8080</a></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402111547.png" alt="" /></p>
+
+<h2 id="vuetify-安装">Vuetify 安装<a href="#vuetify-安装" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>接下来开始使用 <code>Vuetify</code> UI 组件库。</p>
+
+<p>这里我选择用 <code>Vue UI</code> 进行安装。（ 就是想用这个很酷的管理页面 ）</p>
+
+<p>也可以使用其他的安装方式 <a href="https://vuetifyjs.com/zh-Hans/getting-started/quick-start/">Vuetify 入门指南</a> 。</p>
+
+<p>先将当前创建的项目导入到 <code>Vue 项目管理器</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402113605.png" alt="" /></p>
+
+<p>导入完成后从左侧菜单栏进入 <code>插件</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402114030.png" alt="" /></p>
+
+<p>右侧 <code>添加插件</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402114131.png" alt="" /></p>
+
+<p>输入 <code>Vuetify</code> 选中第一个，右下角 <code>安装</code></p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402120334.png" alt="" /></p>
+
+<p>完成安装后，我们再访问 <a href="http://localhost:8080">http://localhost:8080</a> 可以看到新的界面。</p>
+
+<p><img src="https://raw.githubusercontent.com/ElectricBubble/ImageHosting/master/img/20200402121012.png" alt="" /></p>
+
+<h2 id="本地依赖字体和图标">本地依赖字体和图标<a href="#本地依赖字体和图标" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p><code>Vuetify</code> 安装完成后， 项目路径下 <code>public/index.html</code> 会被增加 2个 <code>stylesheet</code>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css&#34;</span><span class="p">&gt;</span></code></pre></div>
+<p>默认是使用的 <code>CDN</code> 访问，我需要作为本地依赖：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ npm install @mdi/font -D
+$ npm install material-design-icons-iconfont -D</code></pre></div>
+<p>安装完成后，修改项目路径下 <code>src/plugins/vuetify.js</code> 分别 <code>import</code> 这两个 <code>css</code>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s2">&#34;vue&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Vuetify</span> <span class="nx">from</span> <span class="s2">&#34;vuetify/lib&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;@mdi/font/css/materialdesignicons.css&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;material-design-icons-iconfont/dist/material-design-icons.css&#34;</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuetify</span><span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="k">new</span> <span class="nx">Vuetify</span><span class="p">({});</span>
+</code></pre></div>
+<p>然后删除 <code>public/index.html</code> 里的 2个 <code>stylesheet</code> ，再访问就不会像之前那么慢了。</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://leixipaopao.com/tags/vue">Vue</a></span><span class="tag"><a href="http://leixipaopao.com/tags/vuetify">Vuetify</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>875 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-04-02 13:59 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="http://leixipaopao.com/posts/0002-golang-nmon-analyser/">
+				<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>使用 Golang 编写的 Web版 Nmon Analyser</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="http://leixipaopao.com">雷系泡泡</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> &#183; <a target="_blank" href="http://beian.miit.gov.cn">苏ICP备19064654号-1</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://leixipaopao.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://leixipaopao.com/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

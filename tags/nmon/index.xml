@@ -14,10 +14,10 @@
     
     <item>
       <title>使用 Golang 编写的 Web版 Nmon Analyser</title>
-      <link>http://leixipaopao.com/posts/golang-nmon-analyser/</link>
+      <link>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</link>
       <pubDate>Tue, 31 Mar 2020 15:40:39 +0800</pubDate>
       
-      <guid>http://leixipaopao.com/posts/golang-nmon-analyser/</guid>
+      <guid>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</guid>
       <description>模仿 Nmon-Analyser（Excel版本）的 Web 版本。 原本做好了就放 线上 没咋去管了，今天才发现原来线上的版本还引用了一个访问很慢的 css 文件</description>
     </item>
     

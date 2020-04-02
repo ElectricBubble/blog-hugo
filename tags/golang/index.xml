@@ -14,19 +14,19 @@
     
     <item>
       <title>使用 Golang 编写的 Web版 Nmon Analyser</title>
-      <link>http://leixipaopao.com/posts/golang-nmon-analyser/</link>
+      <link>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</link>
       <pubDate>Tue, 31 Mar 2020 15:40:39 +0800</pubDate>
       
-      <guid>http://leixipaopao.com/posts/golang-nmon-analyser/</guid>
+      <guid>http://leixipaopao.com/posts/0002-golang-nmon-analyser/</guid>
       <description>模仿 Nmon-Analyser（Excel版本）的 Web 版本。 原本做好了就放 线上 没咋去管了，今天才发现原来线上的版本还引用了一个访问很慢的 css 文件</description>
     </item>
     
     <item>
       <title>Golang 判断系统是 32/64-bit</title>
-      <link>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</link>
+      <link>http://leixipaopao.com/posts/0001-golang-how-to-know-the-32-or-64-bit/</link>
       <pubDate>Thu, 26 Mar 2020 18:10:56 +0800</pubDate>
       
-      <guid>http://leixipaopao.com/posts/golang-how-to-know-the-32-or-64-bit/</guid>
+      <guid>http://leixipaopao.com/posts/0001-golang-how-to-know-the-32-or-64-bit/</guid>
       <description>bit := 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 在 64位 的系统中 bit 的值为 64 在 32位 的系统中 bit 的值为 32 64-bit 32-bit 32 &amp;lt;&amp;lt; (^uint(0) &amp;gt;&amp;gt; 63) 64 32 ^uint(0) 二进制的值 64个1 32个1 ^uint(0) &amp;gt;&amp;gt; 63 二进制的值 1 0 32 &amp;lt;&amp;lt; 1 32</description>
     </item>
     

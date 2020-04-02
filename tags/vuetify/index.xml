@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vuetify on 雷系泡泡</title>
+    <link>http://leixipaopao.com/tags/vuetify/</link>
+    <description>Recent content in Vuetify on 雷系泡泡</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 02 Apr 2020 13:59:26 +0800</lastBuildDate>
+    
+	<atom:link href="http://leixipaopao.com/tags/vuetify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue 使用 UI 组件库 Vuetify 创建项目</title>
+      <link>http://leixipaopao.com/posts/0003-vue-vuetify-create/</link>
+      <pubDate>Thu, 02 Apr 2020 13:59:26 +0800</pubDate>
+      
+      <guid>http://leixipaopao.com/posts/0003-vue-vuetify-create/</guid>
+      <description>前端一直尝试在学习，也断断续续的使用着 Vue.js 然而我的大脑缓存太不给力了，总是学了就忘，忘了就查，查了再用，用完了继续忘，总是去搜索也是麻烦，所以</description>
+    </item>
+    
+  </channel>
+</rss>
