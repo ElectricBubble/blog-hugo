@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 02 Apr 2020 13:59:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 15:37:18 +0800</lastBuildDate>
     
 	<atom:link href="http://leixipaopao.com/tags/vuetify/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue 使用 UI 组件库 Vuetify 修改样式</title>
+      <link>http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/</link>
+      <pubDate>Fri, 10 Apr 2020 15:37:18 +0800</pubDate>
+      
+      <guid>http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/</guid>
+      <description>从群友那儿学来了一个前端词汇 穿透 原因是我使用 Vuetify 的 文本框 v-text-field 使用了 dense 前/后置 图标就不能 垂直居中 了 先来一个没有 dense 的 &amp;lt;v-text-field outlined solo single-line clearable prepend-inner-icon=&amp;#34;mdi-text&amp;#34; hide-details=&amp;#34;auto&amp;#34; label=&amp;#3</description>
+    </item>
     
     <item>
       <title>Vue 使用 UI 组件库 Vuetify 创建项目</title>

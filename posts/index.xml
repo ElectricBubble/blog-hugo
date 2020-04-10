@@ -6,8 +6,112 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 02 Apr 2020 13:59:26 +0800</lastBuildDate>
+		<lastBuildDate>Fri, 10 Apr 2020 15:37:18 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Vue 使用 UI 组件库 Vuetify 修改样式</title>
+			<link>http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/</link>
+			<pubDate>Fri, 10 Apr 2020 15:37:18 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/</guid>
+			<description>从群友那儿学来了一个前端词汇 穿透 原因是我使用 Vuetify 的 文本框 v-text-field 使用了 dense 前/后置 图标就不能 垂直居中 了 先来一个没有 dense 的 &amp;lt;v-text-field outlined solo single-line clearable prepend-inner-icon=&amp;#34;mdi-text&amp;#34; hide-details=&amp;#34;auto&amp;#34; label=&amp;#3</description>
+			<content type="html"><![CDATA[<blockquote>
+<p>从群友那儿学来了一个前端词汇 <code>穿透</code></p>
+</blockquote>
+
+<p>原因是我使用 <code>Vuetify</code> 的 文本框 <code>v-text-field</code></p>
+
+<p>使用了 <code>dense</code>  前/后置 图标就不能 <code>垂直居中</code> 了</p>
+
+<p>先来一个没有 <code>dense</code> 的</p>
+<div class="highlight"><pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">v-text-field</span>
+  <span class="na">outlined</span>
+  <span class="na">solo</span>
+  <span class="na">single</span><span class="nt">-line</span>
+  <span class="na">clearable</span>
+  <span class="na">prepend</span><span class="nt">-inner-icon</span><span class="err">=&#34;</span><span class="na">mdi</span><span class="nt">-text</span><span class="err">&#34;</span>
+  <span class="na">hide</span><span class="nt">-details</span><span class="err">=&#34;</span><span class="na">auto</span><span class="err">&#34;</span>
+  <span class="na">label</span><span class="o">=</span><span class="s">&#34;请输入&#34;</span>
+<span class="p">&gt;</span><span class="o">&lt;</span><span class="err">/v-text-field&gt;</span></code></pre></div>
+<p>效果图如下：</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200410155314.png" alt="" /></p>
+
+<blockquote>
+<p>看着感觉有点“胖”。。。</p>
+</blockquote>
+
+<p>这时候 前置图标 还是居中的</p>
+
+<p>这时候加上 <code>dense</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">v-text-field</span>
+  <span class="na">dense</span>
+  <span class="na">outlined</span>
+  <span class="na">solo</span>
+  <span class="na">single</span><span class="nt">-line</span>
+  <span class="na">clearable</span>
+  <span class="na">prepend</span><span class="nt">-inner-icon</span><span class="err">=&#34;</span><span class="na">mdi</span><span class="nt">-text</span><span class="err">&#34;</span>
+  <span class="na">hide</span><span class="nt">-details</span><span class="err">=&#34;</span><span class="na">auto</span><span class="err">&#34;</span>
+  <span class="na">label</span><span class="o">=</span><span class="s">&#34;请输入&#34;</span>
+<span class="p">&gt;</span><span class="o">&lt;</span><span class="err">/v-text-field&gt;</span></code></pre></div>
+<p>再看效果图：</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200410160707.png" alt="" /></p>
+
+<p>明显图标下移了！看着相当难受啊！</p>
+
+<p>这时候可以看下页面元素的样式，这就是没能居中的原因</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200410160931.png" alt="" /></p>
+
+<p>然后找到 <code>vuetify.css</code> 发现是这么定义的，这。。太为难我了。。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200410162257.png" alt="" /></p>
+
+<p>这时候嘛，作为一个小菜鸟，第一反应，当然是直接修改成 <code>margin-top: 0;</code> 咯</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">style</span> <span class="nt">scoped</span><span class="o">&gt;</span>
+<span class="p">.</span><span class="nc">v-text-field</span><span class="p">.</span><span class="nc">v-input--dense</span> <span class="p">.</span><span class="nc">v-input__prepend-inner</span> <span class="p">.</span><span class="nc">v-input__icon</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">v-icon</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">v-text-field</span><span class="p">.</span><span class="nc">v-input--dense</span> <span class="p">.</span><span class="nc">v-input__append-inner</span> <span class="p">.</span><span class="nc">v-input__icon</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">v-icon</span> <span class="p">{</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span></code></pre></div>
+<p>但是，这时候，</p>
+
+<p>刷新了页面，</p>
+
+<p>清理了浏览器缓存，</p>
+
+<p>再看这个元素的样式，发现！</p>
+
+<p>还是 <code>margin-top: 8px;</code>！</p>
+
+<p>这时候不慌，我在 <code>style</code> 标签里加了 <code>scoped</code> 表示仅作用在当前的 <code>vue</code> 组件，</p>
+
+<p>如果删掉 <code>scoped</code> 呢，的确是可以让 <code>前置图标</code> 居中，图就不放了（懒）。</p>
+
+<p>但是，就真的只有这种方式？</p>
+
+<p>当然不，最终我放了个大招，<code>面向群友编程</code></p>
+
+<p>于是就学到一个新词 <code>穿透</code></p>
+
+<p>在 <a href="https://vue-loader.vuejs.org/zh/guide/scoped-css.html#深度作用选择器">Vue 官网</a> 也是有提到过的，新知识点 get。</p>
+
+<p>这时候赶紧改起来</p>
+<div class="highlight"><pre class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">text</span><span class="o">-</span><span class="nx">field</span><span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input</span><span class="o">--</span><span class="nx">dense</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input__prepend</span><span class="o">-</span><span class="nx">inner</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input__icon</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">icon</span><span class="p">,</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">text</span><span class="o">-</span><span class="nx">field</span><span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input</span><span class="o">--</span><span class="nx">dense</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input__append</span><span class="o">-</span><span class="nx">inner</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">input__icon</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nx">v</span><span class="o">-</span><span class="nx">icon</span> <span class="p">{</span>
+  <span class="nx">margin</span><span class="o">-</span><span class="nx">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span></code></pre></div>
+<p>再看效果图：</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200410164012.png" alt="" /></p>
+
+<p>✌️ 居中了，看着舒服多～</p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>Vue 使用 UI 组件库 Vuetify 创建项目</title>

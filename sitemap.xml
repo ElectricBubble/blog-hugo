@@ -4,31 +4,36 @@
   
   <url>
     <loc>http://leixipaopao.com/posts/</loc>
-    <lastmod>2020-04-02T13:59:26+08:00</lastmod>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/</loc>
-    <lastmod>2020-04-02T13:59:26+08:00</lastmod>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/vue/</loc>
-    <lastmod>2020-04-02T13:59:26+08:00</lastmod>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://leixipaopao.com/posts/0003-vue-vuetify-create/</loc>
-    <lastmod>2020-04-02T13:59:26+08:00</lastmod>
+    <loc>http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/</loc>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/vuetify/</loc>
-    <lastmod>2020-04-02T13:59:26+08:00</lastmod>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/</loc>
+    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/posts/0003-vue-vuetify-create/</loc>
     <lastmod>2020-04-02T13:59:26+08:00</lastmod>
   </url>
   
