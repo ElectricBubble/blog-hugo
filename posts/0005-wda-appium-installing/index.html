@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="WebDriverAgent 安装">
+<meta itemprop="description" content="做个记录，因为我又忘记了。。。 下载项目 这里选择的是 appium/WebDriverAgent git clone https://github.com/appium/WebDriverAgent.git 进入项目文件夹，通过 bootstrap.sh 脚本安装必要的依赖 cd WebDriverAgent ./Scripts/bootstrap.sh 在安装完成后，就可以用 Xcode 打开项目了 设">
+
+
+<meta itemprop="datePublished" content="2020-04-14T13:57:23&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-14T13:57:23&#43;08:00" />
+<meta itemprop="wordCount" content="680">
+
+
+
+<meta itemprop="keywords" content="WebDriverAgent," />
+<meta property="og:title" content="WebDriverAgent 安装" />
+<meta property="og:description" content="做个记录，因为我又忘记了。。。 下载项目 这里选择的是 appium/WebDriverAgent git clone https://github.com/appium/WebDriverAgent.git 进入项目文件夹，通过 bootstrap.sh 脚本安装必要的依赖 cd WebDriverAgent ./Scripts/bootstrap.sh 在安装完成后，就可以用 Xcode 打开项目了 设" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://leixipaopao.com/posts/0005-wda-appium-installing/" />
+<meta property="article:published_time" content="2020-04-14T13:57:23+08:00" />
+<meta property="article:modified_time" content="2020-04-14T13:57:23+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WebDriverAgent 安装"/>
+<meta name="twitter:description" content="做个记录，因为我又忘记了。。。 下载项目 这里选择的是 appium/WebDriverAgent git clone https://github.com/appium/WebDriverAgent.git 进入项目文件夹，通过 bootstrap.sh 脚本安装必要的依赖 cd WebDriverAgent ./Scripts/bootstrap.sh 在安装完成后，就可以用 Xcode 打开项目了 设"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>WebDriverAgent 安装</title>
+	<link rel="stylesheet" href="http://leixipaopao.com/css/style.min.657bcb7af31123e4156b1a3d2ff60a636717e54ead74f882136b5114cf72b55e.css" integrity="sha256-ZXvLevMRI+QVaxo9L/YKY2cX5U6tdPiCE2tRFM9ytV4=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://leixipaopao.com">雷系泡泡</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://leixipaopao.com/posts/">Posts</a>
+				<a href="http://leixipaopao.com/about-me/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/ElectricBubble/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:bubble_yang@yeah.net" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://leixipaopao.com/posts/">Posts</a></li>
+			<li><a href="http://leixipaopao.com/about-me/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>04-14, 2020</span></div>
+				<h1>WebDriverAgent 安装</h1>
+			</header>
+			<div class="content">
+				
+
+<blockquote>
+<p>做个记录，因为我又忘记了。。。</p>
+</blockquote>
+
+<h2 id="下载项目">下载项目<a href="#下载项目" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>这里选择的是 <a href="https://github.com/appium/WebDriverAgent">appium/WebDriverAgent</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/appium/WebDriverAgent.git</code></pre></div>
+<p>进入项目文件夹，通过 <code>bootstrap.sh</code> 脚本安装必要的依赖</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> WebDriverAgent
+./Scripts/bootstrap.sh</code></pre></div>
+<p>在安装完成后，就可以用 <code>Xcode</code> 打开项目了</p>
+
+<hr />
+
+<h2 id="设置签名和证书">设置签名和证书<a href="#设置签名和证书" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>按照下图步骤操作</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414143308.png" alt="" /></p>
+
+<p>再确认下图选项</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414144138.png" alt="" /></p>
+
+<p>再修改一个专属的 <code>Product Bundle Identifier</code></p>
+
+<p>直接双击 <code>value</code> 部分可直接修改</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/image-20200414145045767.png" alt="" /></p>
+
+<hr />
+
+<h2 id="build-test">Build &amp; Test<a href="#build-test" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>接下来，在左上角红框区域选择 <code>WebDriverAgentRunner</code> 以及指定的 <code>iOS设备</code>，</p>
+
+<p>进行构建</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414144501.png" alt="" /></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150242.png" style="zoom:30%;" /></p>
+
+<p>然后开始执行 <code>Test</code></p>
+
+<p>手机需要处于解锁状态</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150457.png" alt="" /></p>
+
+<p>这时候看到一个错误提示</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150828.png" style="zoom:50%;" /></p>
+
+<p>这是因为企图打开刚刚安装在目标设备上的名为 <code>WebDriverAgentRunner-Runner</code> 的 <code>App</code></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414151158.png" alt="" /></p>
+
+<p>而这个 <code>App</code> 暂时还不受信任</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414151534.png" style="zoom:50%;" /></p>
+
+<p>通过 <code>设置 ➡️ 通用 ➡️ 设备管理 ➡️ 开发者APP ➡️ 信任证书</code></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414161524.png" style="zoom:50%;" /></p>
+
+<p>这时候，再执行 <code>Test ⌘U</code></p>
+
+<p>可以看到顶部的状态变更为了 <code>Testing WebDriverAgentRunner</code></p>
+
+<p>从右上角的快捷按钮打开输出窗口，</p>
+
+<p>可以看到 <code>目标设备IP</code> 已经开启了一个服务</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414152726.png" alt="" /></p>
+
+<hr />
+
+<h2 id="iproxy">iproxy<a href="#iproxy" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>理论上，是可以直接访问 <code>http://192.168.2.36:8100/status</code></p>
+
+<p>但实际上，并不行。。</p>
+
+<p>这时候需要用到一个神器库 <a href="https://github.com/libimobiledevice/libimobiledevice">libimobiledevice</a></p>
+
+<blockquote>
+<p>一个光看都觉得🐂的不行的第三方库</p>
+</blockquote>
+
+<p>但是自己编译打包肯定是没必要的。。</p>
+
+<p>所以搜了下，大部分都是用的 <code>brew</code> 安装，但我不是很想用。。</p>
+
+<p>就找到了这个 <a href="https://github.com/benvium/libimobiledevice-macosx">benvium/libimobiledevice-macosx</a> 安装很简单</p>
+
+<p>但是首次执行这些可执行文件的时候，需要去 <code>系统便好设置 ➡️ 安全性与隐私</code> 允许执行。。会比较麻烦。。</p>
+
+<blockquote>
+<p>有很多非常实用的程序，比如 <code>idevicescreenshot</code></p>
+</blockquote>
+
+<p>这里重点使用的是 <code>iproxy</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">iproxy <span class="m">8100</span> <span class="m">8100</span></code></pre></div>
+<blockquote>
+<p>如果同时接入了多个 <code>iOS设备</code></p>
+
+<p>需要使用 <code>idevice_id -l</code> 获取指定的 <code>UDID</code></p>
+
+<p><code>iproxy LOCAL_TCP_PORT DEVICE_TCP_PORT UDID</code></p>
+</blockquote>
+
+<p>当启动了 <code>端口转发</code> 后会提示如下内容</p>
+
+<p>就表示转发功能开启成功了</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">waiting <span class="k">for</span> connection</code></pre></div>
+<p>这时候就可以通过访问 <a href="http://localhost:8100/status">http://localhost:8100/status</a> 得到如下内容</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ curl http://localhost:8100/status
+<span class="o">{</span>
+  <span class="s2">&#34;value&#34;</span> : <span class="o">{</span>
+    <span class="s2">&#34;message&#34;</span> : <span class="s2">&#34;WebDriverAgent is ready to accept commands&#34;</span>,
+    <span class="s2">&#34;state&#34;</span> : <span class="s2">&#34;success&#34;</span>,
+    <span class="s2">&#34;os&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;iOS&#34;</span>,
+      <span class="s2">&#34;version&#34;</span> : <span class="s2">&#34;13.4.1&#34;</span>,
+      <span class="s2">&#34;sdkVersion&#34;</span> : <span class="s2">&#34;13.4&#34;</span>
+    <span class="o">}</span>,
+    <span class="s2">&#34;ios&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;simulatorVersion&#34;</span> : <span class="s2">&#34;13.4.1&#34;</span>,
+      <span class="s2">&#34;ip&#34;</span> : <span class="s2">&#34;192.168.2.36&#34;</span>
+    <span class="o">}</span>,
+    <span class="s2">&#34;ready&#34;</span> : true,
+    <span class="s2">&#34;build&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;time&#34;</span> : <span class="s2">&#34;Apr 14 2020 13:53:07&#34;</span>,
+      <span class="s2">&#34;productBundleIdentifier&#34;</span> : <span class="s2">&#34;com.facebook.WebDriverAgentRunner&#34;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>,
+  <span class="s2">&#34;sessionId&#34;</span> : <span class="s2">&#34;9D808D1D-4B00-4373-9589-BF142948F400&#34;</span>
+<span class="o">}</span>%</code></pre></div>
+<p>到这里就正式结束了</p>
+
+<hr />
+
+<p>可能设备需要先进行下图的添加</p>
+
+<p>但是我很久之前就加过了，也有点忘记当时因为啥要先添加了。。</p>
+
+<p>想起来再记录下。。。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414145933.png" alt="" /></p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://leixipaopao.com/tags/webdriveragent">WebDriverAgent</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>680 字</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-04-14 13:57 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="http://leixipaopao.com/posts/0004-vue-vuetify-deep-selectors/">
+				<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Vue 使用 UI 组件库 Vuetify 修改样式</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="http://leixipaopao.com">雷系泡泡</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> &#183; <a target="_blank" href="http://beian.miit.gov.cn">苏ICP备19064654号-1</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://leixipaopao.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://leixipaopao.com/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

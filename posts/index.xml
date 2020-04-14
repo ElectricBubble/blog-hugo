@@ -6,8 +6,169 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Fri, 10 Apr 2020 15:37:18 +0800</lastBuildDate>
+		<lastBuildDate>Tue, 14 Apr 2020 13:57:23 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>WebDriverAgent 安装</title>
+			<link>http://leixipaopao.com/posts/0005-wda-appium-installing/</link>
+			<pubDate>Tue, 14 Apr 2020 13:57:23 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/0005-wda-appium-installing/</guid>
+			<description>做个记录，因为我又忘记了。。。 下载项目 这里选择的是 appium/WebDriverAgent git clone https://github.com/appium/WebDriverAgent.git 进入项目文件夹，通过 bootstrap.sh 脚本安装必要的依赖 cd WebDriverAgent ./Scripts/bootstrap.sh 在安装完成后，就可以用 Xcode 打开项目了 设</description>
+			<content type="html"><![CDATA[
+
+<blockquote>
+<p>做个记录，因为我又忘记了。。。</p>
+</blockquote>
+
+<h2 id="下载项目">下载项目</h2>
+
+<p>这里选择的是 <a href="https://github.com/appium/WebDriverAgent">appium/WebDriverAgent</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/appium/WebDriverAgent.git</code></pre></div>
+<p>进入项目文件夹，通过 <code>bootstrap.sh</code> 脚本安装必要的依赖</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> WebDriverAgent
+./Scripts/bootstrap.sh</code></pre></div>
+<p>在安装完成后，就可以用 <code>Xcode</code> 打开项目了</p>
+
+<hr />
+
+<h2 id="设置签名和证书">设置签名和证书</h2>
+
+<p>按照下图步骤操作</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414143308.png" alt="" /></p>
+
+<p>再确认下图选项</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414144138.png" alt="" /></p>
+
+<p>再修改一个专属的 <code>Product Bundle Identifier</code></p>
+
+<p>直接双击 <code>value</code> 部分可直接修改</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/image-20200414145045767.png" alt="" /></p>
+
+<hr />
+
+<h2 id="build-test">Build &amp; Test</h2>
+
+<p>接下来，在左上角红框区域选择 <code>WebDriverAgentRunner</code> 以及指定的 <code>iOS设备</code>，</p>
+
+<p>进行构建</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414144501.png" alt="" /></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150242.png" style="zoom:30%;" /></p>
+
+<p>然后开始执行 <code>Test</code></p>
+
+<p>手机需要处于解锁状态</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150457.png" alt="" /></p>
+
+<p>这时候看到一个错误提示</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414150828.png" style="zoom:50%;" /></p>
+
+<p>这是因为企图打开刚刚安装在目标设备上的名为 <code>WebDriverAgentRunner-Runner</code> 的 <code>App</code></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414151158.png" alt="" /></p>
+
+<p>而这个 <code>App</code> 暂时还不受信任</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414151534.png" style="zoom:50%;" /></p>
+
+<p>通过 <code>设置 ➡️ 通用 ➡️ 设备管理 ➡️ 开发者APP ➡️ 信任证书</code></p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414161524.png" style="zoom:50%;" /></p>
+
+<p>这时候，再执行 <code>Test ⌘U</code></p>
+
+<p>可以看到顶部的状态变更为了 <code>Testing WebDriverAgentRunner</code></p>
+
+<p>从右上角的快捷按钮打开输出窗口，</p>
+
+<p>可以看到 <code>目标设备IP</code> 已经开启了一个服务</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414152726.png" alt="" /></p>
+
+<hr />
+
+<h2 id="iproxy">iproxy</h2>
+
+<p>理论上，是可以直接访问 <code>http://192.168.2.36:8100/status</code></p>
+
+<p>但实际上，并不行。。</p>
+
+<p>这时候需要用到一个神器库 <a href="https://github.com/libimobiledevice/libimobiledevice">libimobiledevice</a></p>
+
+<blockquote>
+<p>一个光看都觉得🐂的不行的第三方库</p>
+</blockquote>
+
+<p>但是自己编译打包肯定是没必要的。。</p>
+
+<p>所以搜了下，大部分都是用的 <code>brew</code> 安装，但我不是很想用。。</p>
+
+<p>就找到了这个 <a href="https://github.com/benvium/libimobiledevice-macosx">benvium/libimobiledevice-macosx</a> 安装很简单</p>
+
+<p>但是首次执行这些可执行文件的时候，需要去 <code>系统便好设置 ➡️ 安全性与隐私</code> 允许执行。。会比较麻烦。。</p>
+
+<blockquote>
+<p>有很多非常实用的程序，比如 <code>idevicescreenshot</code></p>
+</blockquote>
+
+<p>这里重点使用的是 <code>iproxy</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">iproxy <span class="m">8100</span> <span class="m">8100</span></code></pre></div>
+<blockquote>
+<p>如果同时接入了多个 <code>iOS设备</code></p>
+
+<p>需要使用 <code>idevice_id -l</code> 获取指定的 <code>UDID</code></p>
+
+<p><code>iproxy LOCAL_TCP_PORT DEVICE_TCP_PORT UDID</code></p>
+</blockquote>
+
+<p>当启动了 <code>端口转发</code> 后会提示如下内容</p>
+
+<p>就表示转发功能开启成功了</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">waiting <span class="k">for</span> connection</code></pre></div>
+<p>这时候就可以通过访问 <a href="http://localhost:8100/status">http://localhost:8100/status</a> 得到如下内容</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ curl http://localhost:8100/status
+<span class="o">{</span>
+  <span class="s2">&#34;value&#34;</span> : <span class="o">{</span>
+    <span class="s2">&#34;message&#34;</span> : <span class="s2">&#34;WebDriverAgent is ready to accept commands&#34;</span>,
+    <span class="s2">&#34;state&#34;</span> : <span class="s2">&#34;success&#34;</span>,
+    <span class="s2">&#34;os&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;iOS&#34;</span>,
+      <span class="s2">&#34;version&#34;</span> : <span class="s2">&#34;13.4.1&#34;</span>,
+      <span class="s2">&#34;sdkVersion&#34;</span> : <span class="s2">&#34;13.4&#34;</span>
+    <span class="o">}</span>,
+    <span class="s2">&#34;ios&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;simulatorVersion&#34;</span> : <span class="s2">&#34;13.4.1&#34;</span>,
+      <span class="s2">&#34;ip&#34;</span> : <span class="s2">&#34;192.168.2.36&#34;</span>
+    <span class="o">}</span>,
+    <span class="s2">&#34;ready&#34;</span> : true,
+    <span class="s2">&#34;build&#34;</span> : <span class="o">{</span>
+      <span class="s2">&#34;time&#34;</span> : <span class="s2">&#34;Apr 14 2020 13:53:07&#34;</span>,
+      <span class="s2">&#34;productBundleIdentifier&#34;</span> : <span class="s2">&#34;com.facebook.WebDriverAgentRunner&#34;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>,
+  <span class="s2">&#34;sessionId&#34;</span> : <span class="s2">&#34;9D808D1D-4B00-4373-9589-BF142948F400&#34;</span>
+<span class="o">}</span>%</code></pre></div>
+<p>到这里就正式结束了</p>
+
+<hr />
+
+<p>可能设备需要先进行下图的添加</p>
+
+<p>但是我很久之前就加过了，也有点忘记当时因为啥要先添加了。。</p>
+
+<p>想起来再记录下。。。</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/20200414145933.png" alt="" /></p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>Vue 使用 UI 组件库 Vuetify 修改样式</title>

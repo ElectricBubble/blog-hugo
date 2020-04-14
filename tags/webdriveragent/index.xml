@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebDriverAgent on 雷系泡泡</title>
+    <link>http://leixipaopao.com/tags/webdriveragent/</link>
+    <description>Recent content in WebDriverAgent on 雷系泡泡</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 14 Apr 2020 13:57:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://leixipaopao.com/tags/webdriveragent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WebDriverAgent 安装</title>
+      <link>http://leixipaopao.com/posts/0005-wda-appium-installing/</link>
+      <pubDate>Tue, 14 Apr 2020 13:57:23 +0800</pubDate>
+      
+      <guid>http://leixipaopao.com/posts/0005-wda-appium-installing/</guid>
+      <description>做个记录，因为我又忘记了。。。 下载项目 这里选择的是 appium/WebDriverAgent git clone https://github.com/appium/WebDriverAgent.git 进入项目文件夹，通过 bootstrap.sh 脚本安装必要的依赖 cd WebDriverAgent ./Scripts/bootstrap.sh 在安装完成后，就可以用 Xcode 打开项目了 设</description>
+    </item>
+    
+  </channel>
+</rss>

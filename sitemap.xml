@@ -4,12 +4,27 @@
   
   <url>
     <loc>http://leixipaopao.com/posts/</loc>
-    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
+    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/</loc>
-    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
+    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/tags/webdriveragent/</loc>
+    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/posts/0005-wda-appium-installing/</loc>
+    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/</loc>
+    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +39,6 @@
   
   <url>
     <loc>http://leixipaopao.com/tags/vuetify/</loc>
-    <lastmod>2020-04-10T15:37:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://leixipaopao.com/</loc>
     <lastmod>2020-04-10T15:37:18+08:00</lastmod>
   </url>
   
