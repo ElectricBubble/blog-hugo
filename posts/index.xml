@@ -6,8 +6,57 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 14 Apr 2020 13:57:23 +0800</lastBuildDate>
+		<lastBuildDate>Wed, 13 May 2020 14:01:28 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>[gwda] Golang 版 WebDriverAgent 客户端库</title>
+			<link>http://leixipaopao.com/posts/0006-wda-gwda/</link>
+			<pubDate>Wed, 13 May 2020 14:01:28 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/0006-wda-gwda/</guid>
+			<description>总算是把这个项目补完了 项目地址：https://github.com/ElectricBubble/gwda 使用 Golang 实现了 appium/WebDriverAgent 的客户端库 appium 其实也</description>
+			<content type="html"><![CDATA[<blockquote>
+<p>总算是把这个项目补完了</p>
+</blockquote>
+
+<p>项目地址：<a href="https://github.com/ElectricBubble/gwda">https://github.com/ElectricBubble/gwda</a></p>
+
+<p>使用 Golang 实现了 <a href="https://github.com/appium/WebDriverAgent">appium/WebDriverAgent</a> 的客户端库</p>
+
+<p><a href="https://github.com/appium/appium/blob/master/docs/en/about-appium/appium-clients.md">appium</a> 其实也是提供了不少语言的客户端库</p>
+
+<p>只是。。感觉太依赖 appium 的那套东西了。。</p>
+
+<p>然后发现了 <a href="https://github.com/openatx/facebook-wda">facebook-wda (python)</a></p>
+
+<p>但是吧。。<code>python</code> 我是能选择不用就不用。。</p>
+
+<blockquote>
+<p>写点小插件用下我倒是无所谓，比如 <code>LaunchBar 6</code> 的 <code>Bing 翻译</code> 插件</p>
+</blockquote>
+
+<p>再加上愈发喜欢 <code>Golang</code> 🥳</p>
+
+<p>也突然想到之前火了一段时间的 <code>跳一跳</code> 脚本</p>
+
+<p>虽然他们都支持了 <code>Android/iOS</code> 但是 <code>iOS</code> 的操作只是针对性的去和 <code>WDA</code> 进行操作</p>
+
+<p>并没有一个专门的 <code>Go Modules</code> 去做这样的事情</p>
+
+<p>瞧，多好的机会，赶紧捡漏呀 🤪</p>
+
+<p>于是 <a href="https://github.com/ElectricBubble/gwda">gwda</a> 就这么诞生了 🤗</p>
+
+<p>这两天开始把一些简单的示例代码补了一下</p>
+
+<p>放两个 <code>GIF</code> 展示一下下</p>
+
+<p><img src="https://cdn.jsdelivr.net/gh/ElectricBubble/ImageHosting/img/图像-2.gif" alt="demo" /></p>
+
+<p><img src="https://raw.githubusercontent.com/electricbubble/ImageHosting/master/img/202005121752图像.gif" alt="gesture" /></p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>WebDriverAgent 安装</title>

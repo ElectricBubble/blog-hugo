@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 14 Apr 2020 13:57:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 14:01:28 +0800</lastBuildDate>
     
 	<atom:link href="http://leixipaopao.com/tags/webdriveragent/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[gwda] Golang 版 WebDriverAgent 客户端库</title>
+      <link>http://leixipaopao.com/posts/0006-wda-gwda/</link>
+      <pubDate>Wed, 13 May 2020 14:01:28 +0800</pubDate>
+      
+      <guid>http://leixipaopao.com/posts/0006-wda-gwda/</guid>
+      <description>总算是把这个项目补完了 项目地址：https://github.com/ElectricBubble/gwda 使用 Golang 实现了 appium/WebDriverAgent 的客户端库 appium 其实也</description>
+    </item>
     
     <item>
       <title>WebDriverAgent 安装</title>

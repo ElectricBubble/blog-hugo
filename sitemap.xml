@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://leixipaopao.com/posts/0006-wda-gwda/</loc>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/tags/golang/</loc>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://leixipaopao.com/posts/</loc>
-    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/</loc>
-    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/tags/webdriveragent/</loc>
-    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://leixipaopao.com/posts/0005-wda-appium-installing/</loc>
-    <lastmod>2020-04-14T13:57:23+08:00</lastmod>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://leixipaopao.com/</loc>
+    <lastmod>2020-05-13T14:01:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://leixipaopao.com/posts/0005-wda-appium-installing/</loc>
     <lastmod>2020-04-14T13:57:23+08:00</lastmod>
   </url>
   
@@ -45,11 +55,6 @@
   <url>
     <loc>http://leixipaopao.com/posts/0003-vue-vuetify-create/</loc>
     <lastmod>2020-04-02T13:59:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://leixipaopao.com/tags/golang/</loc>
-    <lastmod>2020-03-31T15:40:39+08:00</lastmod>
   </url>
   
   <url>
