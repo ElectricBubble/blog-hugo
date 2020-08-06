@@ -6,8 +6,34 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 13 May 2020 14:01:28 +0800</lastBuildDate>
+		<lastBuildDate>Thu, 06 Aug 2020 08:20:00 +0800</lastBuildDate>
 		<atom:link href="http://leixipaopao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>[guia2] Golang 版 appium-uiautomator2-server 客户端库</title>
+			<link>http://leixipaopao.com/posts/0007-uia2-guia2.md/</link>
+			<pubDate>Thu, 06 Aug 2020 08:20:00 +0800</pubDate>
+			
+			<guid>http://leixipaopao.com/posts/0007-uia2-guia2.md/</guid>
+			<description>接着上次的 IOS 版的 gwda 这次把拖更的 Android 版也补上 项目地址: https://github.com/electricbubble/guia2 使用 Golang 实现的 appium-uiautomator2-server 客户端库 虽然大部分常用操作都支持了，但是有些操作，比如 打开 App 并没有默认提供</description>
+			<content type="html"><![CDATA[<hr />
+
+<blockquote>
+<p>接着上次的 <code>IOS</code> 版的 <a href="https://github.com/electricbubble/gwda">gwda</a><br />
+这次把拖更的 <code>Android</code> 版也补上</p>
+</blockquote>
+
+<p>项目地址: <a href="https://github.com/electricbubble/guia2">https://github.com/electricbubble/guia2</a></p>
+
+<p>使用 <code>Golang</code> 实现的 <a href="https://github.com/appium/appium-uiautomator2-server">appium-uiautomator2-server</a> 客户端库</p>
+
+<p>虽然大部分常用操作都支持了，但是有些操作，比如 <code>打开 App</code> 并没有默认提供，需要使用 <code>adb</code> 来实现</p>
+
+<p>放一个示例代码的执行 <code>GIF</code></p>
+
+<p><img src="https://raw.githubusercontent.com/electricbubble/ImageHosting/master/img/202008051855_guia2.gif" alt="example" /></p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>[gwda] Golang 版 WebDriverAgent 客户端库</title>
@@ -15,12 +41,12 @@
 			<pubDate>Wed, 13 May 2020 14:01:28 +0800</pubDate>
 			
 			<guid>http://leixipaopao.com/posts/0006-wda-gwda/</guid>
-			<description>总算是把这个项目补完了 项目地址：https://github.com/ElectricBubble/gwda 使用 Golang 实现了 appium/WebDriverAgent 的客户端库 appium 其实也</description>
+			<description>总算是把这个项目补完了 项目地址：https://github.com/electricbubble/gwda 使用 Golang 实现了 appium/WebDriverAgent 的客户端库 appium 其实也</description>
 			<content type="html"><![CDATA[<blockquote>
 <p>总算是把这个项目补完了</p>
 </blockquote>
 
-<p>项目地址：<a href="https://github.com/ElectricBubble/gwda">https://github.com/ElectricBubble/gwda</a></p>
+<p>项目地址：<a href="https://github.com/electricbubble/gwda">https://github.com/electricbubble/gwda</a></p>
 
 <p>使用 Golang 实现了 <a href="https://github.com/appium/WebDriverAgent">appium/WebDriverAgent</a> 的客户端库</p>
 

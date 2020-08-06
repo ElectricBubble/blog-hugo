@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>appium-uiautomator2-server on 雷系泡泡</title>
+    <link>http://leixipaopao.com/tags/appium-uiautomator2-server/</link>
+    <description>Recent content in appium-uiautomator2-server on 雷系泡泡</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 06 Aug 2020 08:20:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://leixipaopao.com/tags/appium-uiautomator2-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[guia2] Golang 版 appium-uiautomator2-server 客户端库</title>
+      <link>http://leixipaopao.com/posts/0007-uia2-guia2.md/</link>
+      <pubDate>Thu, 06 Aug 2020 08:20:00 +0800</pubDate>
+      
+      <guid>http://leixipaopao.com/posts/0007-uia2-guia2.md/</guid>
+      <description>接着上次的 IOS 版的 gwda 这次把拖更的 Android 版也补上 项目地址: https://github.com/electricbubble/guia2 使用 Golang 实现的 appium-uiautomator2-server 客户端库 虽然大部分常用操作都支持了，但是有些操作，比如 打开 App 并没有默认提供</description>
+    </item>
+    
+  </channel>
+</rss>
